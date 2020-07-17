@@ -42,3 +42,5 @@ This means:
      f      |   has no value  |constantly send compass segment
      a      |/address/comp/...|  change compass OSC pattern 
      c      |   has no value  |  change compass {-180/180}
+
+more information: https://github.com/lukirs95/speechToEmotion

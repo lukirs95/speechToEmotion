@@ -1,0 +1,78 @@
+{
+  "addressee": {
+    "firstPerson": ["ich", "wir"],
+    "thirdPerson": ["du", "er", "sie", "es", "ihr", "ihn", "das"],
+    "be": ["bin", "bist", "seid", "ist", "sind"],
+    "my": ["mich", "mein", "meine", "unsere"],
+    "your": ["dich", "dein", "deine", "eure"]
+  },
+  "vocab": {
+    "happy": {
+      "word": [
+        "schön",
+        "toll",
+        "super",
+        "freu",
+        "glück",
+        "nett",
+        "gut",
+        "mag",
+        "wunderbar",
+        "genial",
+        "hammer",
+        "nice",
+        "cool"
+      ],
+      "neg": "sad"
+    },
+    "sad": {
+      "word": [
+        "traurig",
+        "schade",
+        "mieß",
+        "fehler",
+        "schlimm",
+        "fassungslos",
+        "manno",
+        "oh mann",
+        "oh man"
+      ],
+      "neg": "happy"
+    },
+    "angry": {
+      "word": [
+        "wütend",
+        "mist",
+        "hässlich",
+        "arsch",
+        "a********",
+        "kack",
+        "scheiße",
+        "verdammt",
+        "wut",
+        "was soll das",
+        "das kann doch nicht wahr sein"
+      ],
+      "neg": "funny"
+    },
+    "afraid": {
+      "word": [
+        "angst",
+        "unsicher",
+        "hilfe",
+        "kalt",
+        "beklemmt",
+        "unwohl",
+        "verängstigt",
+        "panisch"
+      ],
+      "neg": "afraid"
+    },
+    "funny": {
+      "word": ["lustig", "witzig", "ulkig", "witz", "kek", "haha", "lol"],
+      "neg": "angry"
+    },
+    "stop": { "word": ["performance stop"], "neg": "stop" },
+    "start": { "word": ["performance go"], "neg": "start" }
+  }
+}

@@ -1,4 +1,10 @@
 "use strict";
+const fs = require("fs");
+const privateKey = fs.readFileSync("selfsigned_cert/localhost.key", "utf8");
+const certificate = fs.readFileSync("selfsigned_cert/localhost.cert", "utf8");
+const credentials = { key: privateKey, cert: certificate };
+
+const https = require("https");
 const express = require("express");
 const app = express();
 const bodyparser = require("body-parser");
@@ -15,7 +21,7 @@ const compPos = compass.position;
 const startArgs = checkFlags();
 const remoteIP = startArgs.oscReceiveIP; // 127.0.0.1
 const remotePort = startArgs.oscSendPort; // 8002
-const apiPort = startArgs.webPort; // 80
+const apiPort = startArgs.webPort; // 8443
 const compassPort = startArgs.oscReceivePort; // 8001;
 const oscCompassAddress = startArgs.compAddress;
 const compassRangeOffset = startArgs.compassRangeOffset; //0
@@ -151,7 +157,9 @@ app.get("/", (req, res, next) => {
   res.end();
 });
 
-let Server = app.listen(apiPort, (err) => {
+const httpsServer = https.createServer(credentials, app);
+
+let Server = httpsServer.listen(apiPort, (err) => {
   err
     ? (console.log(err), process.exit())
     : console.log(

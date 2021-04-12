@@ -6,7 +6,7 @@ const helpText = fs.readFileSync("./customModules/help.txt").toString("ascii");
 
 var oscReceiveIP = "127.0.0.1";
 var flushSegment = false;
-var webPort = "80";
+var webPort = "443";
 var oscReceivePort = "8001";
 var oscSendPort = "8002";
 var compAddress = "/gyrosc/comp";

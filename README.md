@@ -4,13 +4,13 @@ Node JS app for interacting with your voice in 3D audio applications via osc (cu
 
 ## info
 
-You need a working nodeJS environment on your machine.
+You need a working nodeJS environment with npm on your machine.
 You can download it from: https://nodejs.org/en/download/
 
 ## usage
 
 For normal localhost mode (Example: Max/MSP runs on this machine),
-just type: "node app.js".
+just type: "npm start".
 
 ### this means
 
